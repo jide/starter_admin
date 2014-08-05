@@ -1,0 +1,11 @@
+name = Starter: Admin
+description = Starter Admin.
+core = 7.x
+package = Starter
+version = 7.x-1.0
+project = starter_admin
+dependencies[] = features
+dependencies[] = toolbar
+features[features_api][] = api:2
+features[user_role][] = administrator
+project path = sites/all/modules/features
