@@ -5,6 +5,7 @@ package = Starter
 version = 7.x-1.0
 project = starter_admin
 dependencies[] = ctools
+dependencies[] = dblog
 dependencies[] = features
 dependencies[] = strongarm
 dependencies[] = toolbar
