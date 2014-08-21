@@ -5,3 +5,30 @@
  */
 
 include_once 'starter_admin.features.inc';
+
+/**
+ * Make taxonomy/term/ID/edit vertical tabs
+ */
+function starter_admin_form_alter(&$form, &$form_state, $form_id) {
+  if (in_array($form_id, array('user_profile_form', 'taxonomy_form_term'))) {
+    $form['additional_settings'] = array(
+      '#type' => 'vertical_tabs',
+      '#weight' => 99,
+      '#attached' => array(
+        'js' => array(drupal_get_path('module', 'node') . '/content_types.js'),
+      ),
+    );
+
+    foreach ($form as $delta => $element) {
+      if (is_array($element)) {
+        if (!empty($element['#type'])) {
+          if ($element['#type'] == 'fieldset') {
+            $form[$delta]['#group'] = 'additional_settings';
+            $form['additional_settings'][$delta] = $form[$delta];
+            unset($form[$delta]);
+          }
+        }
+      }
+    }
+  }
+}

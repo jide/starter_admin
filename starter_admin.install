@@ -11,4 +11,10 @@ function starter_admin_install() {
     ->condition('type', 'theme')
     ->condition('name', $admin_theme)
     ->execute();
+
+  db_update('system')
+    ->fields(array('weight' => 999))
+    ->condition('type', 'module')
+    ->condition('name', 'starter_admin')
+    ->execute();
 }
