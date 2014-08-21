@@ -19,7 +19,6 @@ dependencies[] = strongarm
 dependencies[] = translation_table
 dependencies[] = views_bulk_operations
 dependencies[] = overlay
-dependencies[] = site_audit
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[user_role][] = administrator
