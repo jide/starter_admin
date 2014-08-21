@@ -10,7 +10,7 @@ include_once 'starter_admin.features.inc';
  * Make taxonomy/term/ID/edit vertical tabs
  */
 function starter_admin_form_alter(&$form, &$form_state, $form_id) {
-  if (in_array($form_id, array('user_profile_form', 'taxonomy_form_term'))) {
+  if (in_array($form_id, array('user_profile_form', 'taxonomy_form_term', 'block_admin_configure', 'block_add_block_form'))) {
     $form['additional_settings'] = array(
       '#type' => 'vertical_tabs',
       '#weight' => 99,
