@@ -16,5 +16,11 @@ function starter_admin_user_default_roles() {
     'weight' => 10,
   );
 
+  // Exported role: editor.
+  $roles['editor'] = array(
+    'name' => 'editor',
+    'weight' => 11,
+  );
+
   return $roles;
 }
