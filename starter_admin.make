@@ -11,7 +11,7 @@ projects[admin_views][subdir] = "contrib"
 projects[admin_language][subdir] = "contrib"
 projects[fpa][subdir] = "contrib"
 projects[ultimate_cron][subdir] = "contrib"
-projects[navbar][subdir] = "navbar"
+projects[navbar][subdir] = "contrib"
 
 libraries[backbone][download][type] = "file"
 libraries[backbone][download][url] = "https://github.com/jashkenas/backbone/archive/1.0.0.zip"
